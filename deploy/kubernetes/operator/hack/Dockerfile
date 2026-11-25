@@ -16,7 +16,8 @@
 #
 
 # Build the binary
-FROM golang:1.25 as builder
+# Keep the builder aligned with the patched toolchain in go.mod.
+FROM golang:1.27.4 as builder
 
 ARG MODULE
 WORKDIR /workspace
